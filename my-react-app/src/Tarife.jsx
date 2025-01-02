@@ -3,19 +3,19 @@ import './Tarife.css';
 import Footer from './Footer';
 import Header from './Header';
 
-const TarifeTractari = () => {
-  const [distanta, setDistanta] = useState(0);
-  const [tipServiciu, setTipServiciu] = useState('tractare');
+// const TarifeTractari = () => {
+//   const [distanta, setDistanta] = useState(0);
+//   const [tipServiciu, setTipServiciu] = useState('tractare');
 
-  // Tarifele pentru diferite servicii
-  const tarife = {
-    tractare: 100, // prețul per km pentru tractare
-    vulcanizare: 70, // prețul per intervenție
-    schimbRoata: 90, // prețul per schimb roată
-    curentBaterie: 90, // prețul per intervenție
-  };
+//   // Tarifele pentru diferite servicii
+//   const tarife = {
+//     tractare: 100, // prețul per km pentru tractare
+//     vulcanizare: 70, // prețul per intervenție
+//     schimbRoata: 90, // prețul per schimb roată
+//     curentBaterie: 90, // prețul per intervenție
+//   };
 
-
+function TarifeTractari() {
 
   return (
     <>
