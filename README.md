@@ -1,1 +1,0 @@
-# tractari-auto-kpy
