@@ -1,0 +1,121 @@
+.tarife {
+    padding: 40px;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+  }
+  
+h2 {
+    font-size: 2rem;
+    color: var(--color-brand--4);
+    margin-bottom: 30px;
+    margin-top: 100px;
+  }
+  
+  .tarifeContainer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .tarifeInfo, .serviciiExtra {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 45%;
+  }
+  
+  h3 {
+    color: var(--color-brand--4);
+    margin-bottom: 20px;
+  }
+  
+  .tarifeTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tarifeTable th, .tarife-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .tarifeTable th {
+    background-color: var(--color-brand--4);
+    color: white;
+  }
+  
+  .serviciiExtra ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .serviciiExtra li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .tarife {
+      padding: 30px;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+      margin-top: 80px;
+    }
+  
+    .tarifeContainer {
+      gap: 20px;
+    }
+  
+    .tarifeInfo,
+    .serviciiExtra {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .tarifeTable th, .tarifeTable td {
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+  
+    .serviciiExtra li {
+      font-size: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .tarife {
+      margin-right: 25px;
+      padding: 20px;
+    }
+  
+    h2 {
+      font-size: 1.6rem;
+      margin-top: 60px;
+    }
+  
+    .tarifeContainer {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .tarifeInfo,
+    .serviciiExtra {
+      width: 100%;
+      padding: 10px; 
+    }
+  
+    .tarifeTable th, .tarifeTable td {
+      padding: 6px; 
+      font-size: 0.8rem;
+    }
+  
+    .serviciiExtra li {
+      font-size: 0.9rem;
+    }
+  }

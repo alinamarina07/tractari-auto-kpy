@@ -1,0 +1,252 @@
+/* Taken from getting started guide at: https://leafletjs.com/examples/quick-start/ */
+@import "https://unpkg.com/leaflet@1.7.1/dist/leaflet.css";
+@import "https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap";
+
+/* These CSS variables are global, so they are available in all CSS modules */
+:root {
+  --color-brand--2: #adc7ce;
+  --color-brand--3: #93adb4;
+  --color-brand--4: #607d88;
+
+  --color-dark--0: #242a2e;
+  --color-dark--1: #2d3439;
+  --color-dark--2: #42484d;
+  --color-dark--3: #000000;
+
+  --color-light--0: #cdc9c9;
+  --color-light--1: #aaa;
+  --color-light--2: #ececec;
+  --color-light--3: #d6dee0;
+  --color-light--4: #ffffff;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: var(--color-brand--2);
+  color: var(--color-dark--3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1000;
+}
+
+.image {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  margin-top: -25px;
+  margin-left: 12px;
+  text-transform: uppercase;
+} 
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin-right: 50px;
+}
+
+.menu ul li {
+  margin-left: 50px;
+}
+
+.menu ul li button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: var(--color-dark--3);
+  background-color: var(--color-brand--2);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Manrope', sans-serif;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background: var(--color-dark--3);
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+.bar{
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.menu ul li button:hover {
+  background: var(--color-brand--3);
+  color: var(--color-light--4);
+  transform: scale(1.05);
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.callButtonHeader, .whatsappButtonHeader, .yahooButtonHeader {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.callButtonHeader, .yahooButtonHeader, .whatsappButtonHeader {
+  color: var(--color-dark--3);
+}
+
+.callButtonHeader:hover, .yahooButtonHeader:hover, .whatsappButtonHeader:hover {
+  color: var(--color-light--4);
+}
+
+.phoneIcon, .whatsappIcon, .emailIcon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+
+/* style for tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  header {
+    height: 90px; 
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .logo {
+    font-size: 14px;
+    margin-left: 15px;
+  }
+
+  .callButtonHeader, .whatsappButtonHeader, .yahooButtonHeader {
+    margin: 15px;
+    padding: 8px 15px; 
+    font-size: 14px;
+  }
+
+  .hamburger {
+    margin-right: 50px;
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu.active {
+    display: flex;
+    flex-direction: column; 
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    background: var(--color-brand--2);
+    z-index: 1000;
+  }
+}
+
+/* style for phones */
+@media only screen and (max-width: 767px) {
+  header {
+    height: 85px;
+    width: 100%;
+    padding: 0;
+    justify-content: space-between;
+  }
+
+  .image {
+    width: 70px;
+  }
+
+  .logo {
+    font-size: 12px;
+    margin-left: 22px;
+    display: none;
+  }
+
+  .callButtonHeader, .whatsappButtonHeader, .yahooButtonHeader {
+    font-size: 12px;
+    margin: 1px;
+    padding: 5px 1px;
+  }
+
+  .phoneIcon, .whatsappIcon, .emailIcon {
+    font-size: 16px;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-right: 20px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu.active {
+    display: flex;
+    flex-direction: column; 
+    position: absolute;
+    top: 85px;
+    left: 1px;
+    width: 100%;
+    background: var(--color-brand--2);
+    z-index: 1000;
+  }
+}
