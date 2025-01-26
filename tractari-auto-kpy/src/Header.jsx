@@ -56,7 +56,9 @@ return (
             target="_blank"
             rel="noopener noreferrer">
                 <FaEnvelope className="emailIcon" /> 
-                Email: Crazy_cappy@yahoo.com
+                Email: 
+                Crazy_cappy
+                @yahoo.com
             </a>
 
         <nav className={`menu ${isOpen ? 'active' : ''}`}>

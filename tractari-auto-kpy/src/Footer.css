@@ -1,60 +1,44 @@
-.footer {
-    background-color: var(--color-brand--2); /* Fundal închis */
-    color: #fff; /* Text alb */
+  .footer {
+    background-color: #ffffff; 
+    color: #333; 
+    padding: 20px;
     text-align: center;
-    padding: 20px 0;
-    font-size: 14px;
-    line-height: 1.5;
-    margin-top: 40px;
-    }
+  }
   
   .footer p {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
+    margin: 10px 0;
   }
-    
+  
   .footer a {
-    color: var(--color-light--4); 
+    color: #007bff; 
     text-decoration: none;
-    transition: color 0.3s ease;
   }
-    
+  
   .footer a:hover {
-    color: var(--color-brand--4); 
-  }
-    
-  .social-links {
-    margin-top: 10px;
-  }
-    
-  .social-links a {
-    margin: 0 10px;
-    font-size: 16px;
-    font-weight: bold;
-    display: inline-block;
-  }
-    
-  .social-links a:hover {
     text-decoration: underline;
   }
   
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
-      .footer p {
-        font-size: 12px;
-      }
-    
-      .social-links a {
-        font-size: 14px;
-      }
-    }
-    
+  .footer .social-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
   @media (max-width: 768px) {
-    .footer p {
-      font-size: 12px;
+    .footer {
+      padding: 15px;
     }
-    
-    .social-links a {
+  
+    .footer .social-links {
+      gap: 20px;
+    }
+  
+    .footer a {
+      font-size: 14px;
+    }
+  
+    .footer p {
       font-size: 14px;
     }
   }

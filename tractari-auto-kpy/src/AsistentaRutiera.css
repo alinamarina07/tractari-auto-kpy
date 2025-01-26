@@ -1,19 +1,18 @@
 .asistentaRutiera {
-    padding: 30px;
-    margin-top: 100px;
+    margin-top: 90px;
   }
 
 .asistentaRutiera h1 {
     text-align: center;
     font-size: 34px;
-    margin: 20px 20px;
+    /* margin: 20px 20px; */
     color: var(--color-brand--4);
 }
 
 .asistentaRutiera p {
     text-align: center;
     font-size: 18px;
-    margin: 20px 20px;
+    /* margin: 20px 20px; */
     color: var(--color-dark--3);
 }
   
@@ -74,7 +73,7 @@
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .asistentaRutiera {
         padding: 30px;
-        margin-top: 100px;
+        margin-top: 50px;
       }
 
     .asistentaRutiera h1 {
@@ -85,7 +84,6 @@
     }
 
     .asistentaRutiera p {
-
         text-align: center;
         font-size: 18px;
         margin: 20px 20px;
@@ -146,4 +144,34 @@
       .buttonAsistentaRutiera:hover {
         background-color: var(--color-brand--2);
       }
+}
+
+@media (max-width: 768px) {
+  .asistentaRutiera {
+    padding: 15px;
+    margin-top: 30px;
+  }
+
+  .asistentaRutiera h1 {
+    font-size: 1.5rem;
+  }
+
+  .asistentaRutiera h2 {
+    font-size: 1.2rem;
+  }
+
+  .asistentaRutiera p {
+    font-size: 0.95rem;
+  }
+
+  .asistentaRutiera table th, 
+  .asistentaRutiera table td {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .asistentaRutiera .buttonAsistentaRutiera {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
 }
