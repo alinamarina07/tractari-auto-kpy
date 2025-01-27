@@ -89,6 +89,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  display: none;
 }
 
 .hamburger .bar {
@@ -102,7 +103,7 @@ header {
 .bar{
   transition: all 0.3s ease;
   border-radius: 2px;
-  display: none;
+  /* display: none; */
 }
 
 .menu ul li button:hover {
