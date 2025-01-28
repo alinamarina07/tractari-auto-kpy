@@ -145,7 +145,6 @@ header {
   font-size: 20px;
 }
 
-
 /* style for tablets */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   header {
@@ -208,13 +207,13 @@ header {
   }
 
   .logo {
-    font-size: 12px;
-    margin-left: -18px;
+    font-size: 9px;
+    margin-left: -7px;
     margin-top: -30px;
   }
 
   .callButtonHeader, .whatsappButtonHeader, .yahooButtonHeader {
-    font-size: 10px;
+    font-size: 9px;
     margin: 1px;
   }
 

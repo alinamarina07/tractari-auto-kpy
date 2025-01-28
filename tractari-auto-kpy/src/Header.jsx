@@ -5,6 +5,7 @@ import { faPhoneSquare} from '@fortawesome/free-solid-svg-icons';
 import { FaWhatsapp } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 function Header () {
     const [isOpen, setIsOpen] = useState(false);
     const navigate = useNavigate();
@@ -32,8 +33,10 @@ return (
     <>
         <header>
             <div>
-                <img src='/Logo-Final-SOS-Tractari-Alb-dar-negru.png' className="image"></img>
+                <Link to ="/" style={{ color:'black' }}>
+                <img src='/Logo-Final-SOS-Tractari-Alb-dar-negru.png' alt='Logo' className="image"></img>
                 <div className="logo">Tractari kpy</div>
+                </Link>
             </div>
 
             <a href='tel:+40761866858' 
